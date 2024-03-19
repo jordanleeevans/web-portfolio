@@ -11,7 +11,7 @@ export default function IntroText() {
       animate={{ opacity: 1, y: 0 }}
       ref={ref}
     >
-      Hello, I'm
+      {"Hello, I'm"}
       <RoughNotation
         className="mx-2 my-10"
         type="highlight"
