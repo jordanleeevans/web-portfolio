@@ -4,8 +4,7 @@ import { useState, useRef } from "react";
 import { ProjectProps } from "@/lib/types";
 import Image from "next/image";
 import TagList from "@/components/projects/tag-list";
-import { useScroll } from "framer-motion";
-import { motion, useTransform } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 
 export default function Project({
   title,
