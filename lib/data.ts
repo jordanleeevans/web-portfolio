@@ -105,6 +105,8 @@ export const skillsData = [
   "TensorFlow & Keras",
   "Sci-kit Learn",
   "Pandas",
+  "Docker",
+  "Ansible",
   "AWS",
   "MySQL",
   "HTML",
