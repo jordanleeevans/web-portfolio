@@ -4,8 +4,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import { links } from "@/lib/data";
 import Link from "next/link";
+import clsx from "clsx";
+import { useActiveSectionContext } from "@/context/active-section-context";
+import { RoughNotation } from "react-rough-notation";
+
+let colorIndex = 0;
+const colors = ["#a8e6cf", "#dcedc1", "#ffd3b6", "#ffaaa5", "#ff8b94"];
+
+function getNextPastelColor() {
+  const color = colors[colorIndex];
+  colorIndex = (colorIndex + 1) % colors.length;
+  return color;
+}
 
 export default function Header() {
+  const { activeSection, setActiveSection } = useActiveSectionContext();
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -25,10 +38,25 @@ export default function Header() {
               transition={{ delay: 0.25 + index * 0.1 }}
             >
               <Link
-                className="flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition"
+                className={clsx(
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition",
+                  { "text-gray-950": activeSection === link.name }
+                )}
                 href={link.hash}
+                onClick={() => setActiveSection(link.name)}
               >
-                {link.name}
+                <RoughNotation
+                  type="box"
+                  // brackets={["top", "bottom"]}
+                  show={activeSection === link.name}
+                  animationDuration={1500}
+                  duration={1000}
+                  iterations={1}
+                  color={getNextPastelColor()}
+                  strokeWidth={4}
+                >
+                  {link.name}
+                </RoughNotation>
               </Link>
             </motion.li>
           ))}
