@@ -1,7 +1,7 @@
 import React from "react";
-import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
+import { SiJavascript } from "react-icons/si";
+import { FaPython } from "react-icons/fa";
+import { IoAnalytics } from "react-icons/io5";
 import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
@@ -35,28 +35,28 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Digital Analytics Manager/Software Development",
+    location: "X4 Software",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
+      "Fresh faced out of university, during the unprecedented year that was 2020, I enrolled in a digital analytics manager role at X4 Software. This quickly evolved into much more, as I took on software responibilities too. I ensured the web scraping logic was current using JavaScript, jQuery and Mocha.",
+    icon: React.createElement(SiJavascript),
+    date: "Nov 2020 - July 2021",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Data/Backend Engineer",
+    location: "Yard",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
-    icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+      "As a Data/Backend Engineer at Yard, I developed server-side logic and APIs using Python (Django) and MySQL, adhered to SOLID principles, and employed test-driven development. I created data pipelines and databases, and developed an OCR tool in a successful partnership with DAPTEC at Cardiff Met University.",
+    icon: React.createElement(IoAnalytics),
+    date: "Aug 2021 - June 2023",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Senior Software Engineer",
+    location: "Cubed",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "As a Senior Software Engineer at Cubed, I manage a high-volume data service handling over 100 million daily requests and oversee the AWS infrastructure. I independently develop deep learning models for complex problems, maintain numerous databases and cron commands, and enhance system monitoring and machine learning tools.",
+    icon: React.createElement(FaPython),
+    date: "June 2023 - Present",
   },
 ] as const;
 
