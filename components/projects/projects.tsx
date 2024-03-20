@@ -6,9 +6,9 @@ import Project from "./project";
 import useSectionInView from "@/hooks/active-section";
 
 export default function Projects() {
-  const { ref } = useSectionInView("Projects", 0.3);
+  const { ref } = useSectionInView("Projects", 0.5);
   return (
-    <section ref={ref} id="projects" className="scroll-m-28">
+    <section ref={ref} id="projects" className="scroll-m-28 mb-28">
       <SectionHeading>My Projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
