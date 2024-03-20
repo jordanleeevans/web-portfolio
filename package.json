@@ -17,6 +17,7 @@
     "react-icons": "^5.0.1",
     "react-intersection-observer": "^9.8.1",
     "react-rough-notation": "^1.0.5",
+    "react-vertical-timeline-component": "^3.6.0",
     "rough-notation": "^0.5.1",
     "tailwind-merge": "^2.2.2"
   },
