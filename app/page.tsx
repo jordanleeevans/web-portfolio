@@ -3,6 +3,8 @@ import SectionDivider from "@/components/section-divider";
 import About from "@/components/about/about.tsx";
 import Projects from "@/components/projects/projects.tsx";
 import Skills from "@/components/skills/skills.tsx";
+import Experience from "@/components/experience/experience.tsx";
+
 export default function Home() {
   return (
     <main className="flex flex-col items-center px-4">
@@ -12,6 +14,7 @@ export default function Home() {
       <About />
       <Projects />
       <Skills />
+      <Experience />
     </main>
   );
 }
