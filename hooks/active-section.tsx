@@ -14,9 +14,6 @@ export default function useSectionInView(
   const { ref, inView } = useInView({
     threshold,
   });
-  if (sectionName === "About") console.log(inView, sectionName);
-  if (sectionName === "Home") console.log(inView, sectionName);
-  if (sectionName === "Projects") console.log(inView, sectionName);
   const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
   useEffect(() => {
     if (inView && Date.now() - timeOfLastClick > 1000) {
