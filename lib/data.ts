@@ -46,7 +46,7 @@ export const experiencesData = [
     title: "Data/Backend Engineer",
     location: "Yard",
     description:
-      "As a Data/Backend Engineer at Yard, I developed server-side logic and APIs using Python (Django) and MySQL, adhered to SOLID principles, and employed test-driven development. I created data pipelines and databases, and developed an OCR tool in a successful partnership with DAPTEC at Cardiff Met University.",
+      "Developed server-side logic and APIs using Python (Django) and MySQL, adhered to SOLID principles, and employed test-driven development. I created data pipelines and databases, and developed an OCR tool in a successful partnership with DAPTEC at Cardiff Met University.",
     icon: React.createElement(IoAnalytics),
     date: "Aug 2021 - June 2023",
   },
