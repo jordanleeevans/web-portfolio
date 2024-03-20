@@ -18,7 +18,8 @@ function getNextPastelColor() {
 }
 
 export default function Header() {
-  const { activeSection, setActiveSection } = useActiveSectionContext();
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -43,11 +44,13 @@ export default function Header() {
                   { "text-gray-950": activeSection === link.name }
                 )}
                 href={link.hash}
-                onClick={() => setActiveSection(link.name)}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
               >
                 <RoughNotation
                   type="box"
-                  // brackets={["top", "bottom"]}
                   show={activeSection === link.name}
                   animationDuration={1500}
                   duration={1000}

@@ -1,23 +1,12 @@
 "use client";
+import React from "react";
 import SectionHeading from "@/components/section-heading";
-import React, { useState, useEffect, useMemo } from "react";
 import { RoughNotation } from "react-rough-notation";
 import { motion } from "framer-motion";
-import { useRoughNotationAnimation } from "@/hooks/rough-notation";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import useSectionInView from "@/hooks/active-section";
 
 export default function About() {
-  // const { ref, inView, animationDelay } = useRoughNotationAnimation();
-  const { ref, inView } = useInView({
-    threshold: 0.75,
-  });
-  const { setActiveSection } = useActiveSectionContext();
-  useEffect(() => {
-    if (inView) {
-      setActiveSection("About");
-    }
-  }, [inView, setActiveSection]);
+  const { ref } = useSectionInView("About");
   return (
     <motion.section
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
@@ -27,15 +16,7 @@ export default function About() {
       transition={{ duration: 0.175 }}
       id="about"
     >
-      {/* <RoughNotation
-        type="box"
-        show={inView}
-        color="#bae1ff"
-        animationDelay={animationDelay}
-        strokeWidth={4}
-      > */}
       <SectionHeading>About Me</SectionHeading>
-      {/* </RoughNotation> */}
       <p className="mb-3">
         Graduating from the University of Bristol with a degree in{" "}
         <b>Physics</b> during the chaotic year that was 2020, I decided to

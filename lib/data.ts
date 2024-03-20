@@ -69,7 +69,7 @@ export const projectsData = [
       "Python",
       "AWS",
       "MySQL",
-      "TensorFlowk",
+      "TensorFlow",
       "Sci-kit Learn",
       "Pandas",
       "ETL",

@@ -31,7 +31,7 @@ export const useRoughNotationAnimation = () => {
 
   // Create a ref to the section
   const { ref, inView } = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const animationDelay = useMemo(getAnimationDelay, [windowWidth]);
