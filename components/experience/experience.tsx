@@ -8,10 +8,9 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import useSectionInView from "@/hooks/active-section";
-import { motion } from "framer-motion";
 
 export default function Experience() {
-  const { ref, inView } = useSectionInView("experience", 0.4);
+  const { ref, inView } = useSectionInView("Experience");
 
   const variants = {
     hidden: { opacity: 0 },
@@ -24,13 +23,7 @@ export default function Experience() {
   };
 
   return (
-    <motion.section
-      id="experience"
-      ref={ref}
-      variants={variants}
-      initial="hidden"
-      animate={inView ? "show" : "hidden"}
-    >
+    <section id="experience" ref={ref} className="mb-28">
       <SectionHeading>My Experience</SectionHeading>
       <VerticalTimeline lineColor="">
         {experiencesData.map((experience, index) => (
@@ -63,6 +56,6 @@ export default function Experience() {
           </React.Fragment>
         ))}
       </VerticalTimeline>
-    </motion.section>
+    </section>
   );
 }
