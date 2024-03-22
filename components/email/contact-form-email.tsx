@@ -16,7 +16,6 @@ type ContactFormEmailProps = {
 };
 
 export function ContactFormEmail({ message }: ContactFormEmailProps) {
-  // TODO - Get this integrated with the email sending
   return (
     <Html>
       <Head>
