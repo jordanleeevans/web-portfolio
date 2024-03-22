@@ -74,28 +74,28 @@ export const projectsData = [
       "Pandas",
       "ETL",
     ],
-    imageUrl: "/corpcomment.png",
+    imageUrl: "/page-attribution.png",
   },
   {
     title: "Keyword Content Analysis",
     description:
       "Developed a keyword content analysis tool that scrapes a client’s website and scores SEO keywords against the website content.",
     tags: ["Python", "Web Scraping", "ETL", "tf-idf"],
-    imageUrl: "/wordanalytics.png",
+    imageUrl: "/keyword-content-analysis-zoomed.png",
   },
   {
     title: "Self-hosting services with Docker",
     description:
       "Repurposed an old PC as a server to host various services through Docker, maintained using Infrastructure as Code via Ansible playbooks.",
     tags: ["Docker", "Ansible", "Cyber Security", "Networking"],
-    imageUrl: "/wordanalytics.png",
+    imageUrl: "/home-lab.png",
   },
   {
     title: "Development of a Multi-threaded Google Trends Data Scraper",
     description:
       "Developed a multi-threaded Python cron job that scrapes Google Trends data, employing strategies to reduce rate limiting.",
     tags: ["Python", "Web Scraping", "Google Trends", "Multi-threading"],
-    imageUrl: "/wordanalytics.png",
+    imageUrl: "/google-trends.png",
   },
 ] as const;
 
