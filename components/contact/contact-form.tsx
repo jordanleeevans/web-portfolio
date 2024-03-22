@@ -5,37 +5,53 @@ import { Input } from "../ui/input";
 import { TextArea } from "../ui/text-area";
 import { cn } from "@/utils/cn";
 import { FiSend } from "react-icons/fi";
+import { sendEmail } from "@/actions/sendEmail";
 
 export function ContactForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
-  };
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input ">
       <h2 className="font-semibold text-xl text-neutral-800 dark:text-gray-800">
         Please get in touch if you would like to have a chat 🤟🏼
       </h2>
 
-      <form className="my-8" onSubmit={handleSubmit}>
+      <form
+        className="my-8"
+        action={async (formData) => {
+          await sendEmail(formData).then((res) => {
+            if (res.error) {
+              alert(res.error);
+            } else {
+              alert("Message sent successfully, whoop whoop! 🎉");
+            }
+          });
+        }}
+      >
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email">Email Address</Label>
+          <Label htmlFor="email" className="dark:text-gray-800">
+            Email Address
+          </Label>
           <Input
             id="email"
             placeholder="supercoolemail@cool.person"
+            name="senderEmail"
             type="email"
             required
             maxLength={100}
+            className="!text-black"
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="message">Message</Label>
+          <Label htmlFor="message" className="dark:text-gray-800">
+            Message
+          </Label>
           <TextArea
             id="message"
             placeholder="Write your message here..."
+            name="senderMessage"
             type="text"
             required
-            maxLength={500}
+            maxLength={5000}
+            className="!text-black"
           />
         </LabelInputContainer>
         <button
