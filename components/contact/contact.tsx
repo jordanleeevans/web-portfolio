@@ -10,13 +10,14 @@ export default function Contact() {
   return (
     <motion.section
       id="contact"
+      className="mb-28"
       ref={ref}
       initial={{ opacity: 0 }}
       animate={{ opacity: inView ? 1 : 0 }}
       transition={{ duration: 0.5 }}
     >
       <SectionHeading>Contact Me</SectionHeading>
-      <ContactForm />;
+      <ContactForm />
     </motion.section>
   );
 }
