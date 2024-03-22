@@ -10,7 +10,7 @@ import { experiencesData } from "@/lib/data";
 import useSectionInView from "@/hooks/active-section";
 
 export default function Experience() {
-  const { ref, inView } = useSectionInView("Experience");
+  const { ref, inView } = useSectionInView("Experience", 0.2);
 
   const variants = {
     hidden: { opacity: 0 },
