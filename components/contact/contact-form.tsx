@@ -24,6 +24,8 @@ export function ContactForm() {
             id="email"
             placeholder="supercoolemail@cool.person"
             type="email"
+            required
+            maxLength={100}
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
@@ -32,6 +34,8 @@ export function ContactForm() {
             id="message"
             placeholder="Write your message here..."
             type="text"
+            required
+            maxLength={500}
           />
         </LabelInputContainer>
         <button
