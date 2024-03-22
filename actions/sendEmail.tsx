@@ -1,5 +1,4 @@
 "use server";
-import { React } from "react";
 import { Resend } from "resend";
 import { isValidString, getErrorMessage } from "@/lib/helpers";
 import { ContactFormEmail } from "@/components/email/contact-form-email";
@@ -28,8 +27,8 @@ export const sendEmail = async (formData: FormData) => {
       to: "jordanleeevans@hotmail.com",
       subject: "New message from your website",
       reply_to: senderEmail as string,
-      // react: React.createElement(ContactFormEmail, { senderMessage }),
-      text: senderMessage as string,
+      react: <ContactFormEmail message={senderMessage as string} />,
+      // text: senderMessage as string,
     });
   } catch (error: unknown) {
     return {

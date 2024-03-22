@@ -23,14 +23,16 @@ export function ContactFormEmail({ message }: ContactFormEmailProps) {
         <Tailwind />
       </Head>
       <Body>
-        <Section>
-          <Container>
-            <Heading>Message from your website</Heading>
-            <Hr />
-            <p>{message}</p>
+        <Section className="bg-gray-100 p-8">
+          <Container className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-4 p-4">
+            <Heading className="text-2xl mb-4 text-center font-bold text-gray-900">Someone Contacted You</Heading>
+            <Hr className="mb-4" />
+            <p className="text-gray-700">{message}</p>
           </Container>
         </Section>
       </Body>
     </Html>
   );
 }
+
+export default ContactFormEmail;
