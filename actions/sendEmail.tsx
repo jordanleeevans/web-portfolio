@@ -28,7 +28,6 @@ export const sendEmail = async (formData: FormData) => {
       subject: "New message from your website",
       reply_to: senderEmail as string,
       react: <ContactFormEmail message={senderMessage as string} />,
-      // text: senderMessage as string,
     });
   } catch (error: unknown) {
     return {
