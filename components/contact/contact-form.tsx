@@ -10,8 +10,8 @@ import toast from "react-hot-toast";
 
 export function ContactForm() {
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input ">
-      <h2 className="font-semibold text-xl text-neutral-800 dark:text-gray-800">
+    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input dark:bg-zinc-950">
+      <h2 className="font-semibold text-xl text-neutral-800 dark:text-gray-300">
         Please get in touch if you would like to have a chat 🤟🏼
       </h2>
 
@@ -29,7 +29,7 @@ export function ContactForm() {
         }}
       >
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="email" className="dark:text-gray-800">
+          <Label htmlFor="email" className="text-gray-800 dark:text-gray-500">
             Email Address
           </Label>
           <Input
@@ -43,7 +43,7 @@ export function ContactForm() {
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="message" className="dark:text-gray-800">
+          <Label htmlFor="message" className="text-gray-800 dark:text-gray-500">
             Message
           </Label>
           <TextArea

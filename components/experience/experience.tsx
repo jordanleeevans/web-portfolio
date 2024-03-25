@@ -8,9 +8,11 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { experiencesData } from "@/lib/data";
 import useSectionInView from "@/hooks/active-section";
+import { useActiveTheme } from "@/context/active-theme-context";
 
 export default function Experience() {
   const { ref, inView } = useSectionInView("Experience", 0.2);
+  const { theme, setTheme } = useActiveTheme();
 
   const variants = {
     hidden: { opacity: 0 },
@@ -31,25 +33,30 @@ export default function Experience() {
             <VerticalTimelineElement
               visible={inView}
               contentStyle={{
-                background: "#f3f4f6",
+                background:
+                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.1)",
                 boxShadow: "none",
                 border: "1px solig rgba(0, 0, 0, 0.05)",
                 textAlign: "left",
                 padding: "1.3rem 2rem",
               }}
               contentArrowStyle={{
-                borderRight: "7px solid #f3f4f6",
+                borderRight:
+                  theme === "light"
+                    ? "7px solid #f3f4f6"
+                    : "7px solid rgba(255, 255, 255, 0.1)",
               }}
               date={experience.date}
               icon={experience.icon}
               iconStyle={{
-                background: "white",
+                background:
+                  theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.1)",
                 fontSize: "1.5rem",
               }}
             >
               <h3 className="font-semibold capitalize">{experience.title}</h3>
               <p className="font-normal !mt-0">{experience.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700">
+              <p className="!mt-1 !font-normal text-gray-700 dark:text-gray-400">
                 {experience.description}
               </p>
             </VerticalTimelineElement>

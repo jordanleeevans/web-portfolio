@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header.tsx";
+import Footer from "@/components/footer.tsx";
+import ThemeToggle from "@/components/ui/theme-toggle.tsx";
 import ActiveSectionContextProvider from "@/context/active-section-context";
+import ActiveThemeContextProvider from "@/context/active-theme-context";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Toaster } from "react-hot-toast";
 
@@ -23,16 +26,20 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36`}
+        className={`${inter.className} bg-gray-50 text-gray-950 relative pt-28 sm:pt-36 dark:bg-gray-900 dark:text-gray-50 transition-colors`}
       >
         <div className="absolute inset-0 -z-10">
           <AuroraBackground />
         </div>
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Toaster position="bottom-center" />
-        </ActiveSectionContextProvider>
+        <ActiveThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Toaster position="top-right" />
+            <Footer />
+            <ThemeToggle />
+          </ActiveSectionContextProvider>
+        </ActiveThemeContextProvider>
       </body>
     </html>
   );

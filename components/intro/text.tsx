@@ -2,8 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { RoughNotation } from "react-rough-notation";
 import { useRoughNotationAnimation } from "@/hooks/rough-notation";
+import { useActiveTheme } from "@/context/active-theme-context";
+
 export default function IntroText() {
   const { ref, inView, animationDelay } = useRoughNotationAnimation();
+  const { theme, setTheme } = useActiveTheme();
   return (
     <motion.h1
       className="mb-10 mt-4 px-4 text-2xl font-medium leading-[1.5] sm:text-4xl"
@@ -16,7 +19,7 @@ export default function IntroText() {
         className="mx-2 my-10"
         type="highlight"
         show={inView}
-        color="#ffc379"
+        color={theme === "light" ? "#ffc379" : "#78716c"}
         animationDelay={animationDelay}
         padding={[0, 0]}
         multiline={true}
@@ -31,7 +34,7 @@ export default function IntroText() {
       On a{" "}
       <RoughNotation
         type="underline"
-        color="#fd7f7f"
+        color={theme === "light" ? "#fd7f7f" : "#94a3b8"}
         show={inView}
         animationDelay={animationDelay}
         padding={[0, 0]}

@@ -23,7 +23,7 @@ export default function ActionButtons() {
     >
       <Link
         href="#contact"
-        className="group bg-gray-900 text-white px-7 py-3 flex items-center justify-center rounded-full font-medium text-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-xl outline-none hover:scale-105 active:scale-95 border border-black/10"
+        className="group bg-gray-900 text-white px-7 py-3 flex items-center justify-center rounded-full font-medium text-lg transition-all duration-300 hover:bg-gray-800 hover:shadow-xl outline-none hover:scale-105 active:scale-95 border border-black/10 dark:bg-gray-800 dark:text-gray-50"
         onClick={() => {
           setActiveSection("Contact");
           setTimeOfLastClick(Date.now());
@@ -33,7 +33,7 @@ export default function ActionButtons() {
         <BsArrowRight className="inline opacity-70 group-hover:translate-x-1 transition" />
       </Link>
       <a
-        className="group bg-white text-gray-900 px-7 py-3 flex items-center justify-center rounded-full font-medium text-lg transition-all duration-300 hover:bg-gray-100 hover:shadow-xl outline-none hover:scale-105 active:scale-95 cursor-pointer border border-black/10"
+        className="group bg-white text-gray-900 px-7 py-3 flex items-center justify-center rounded-full font-medium text-lg transition-all duration-300 hover:bg-gray-100 hover:shadow-xl outline-none hover:scale-105 active:scale-95 cursor-pointer border border-black/10 dark:bg-gray-500  dark:text-gray-50"
         href="/Jordan_Evans_CV.pdf"
         download
       >
@@ -44,18 +44,18 @@ export default function ActionButtons() {
         />
       </a>
       <a
-        className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full transition-all duration-300 hover:bg-gray-100 hover:shadow-xl outline-none hover:scale-105 active:scale-95 cursor-pointer border border-black/10 focus:scale-110"
+        className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full transition-all duration-300 hover:bg-gray-100 hover:shadow-xl outline-none hover:scale-105 active:scale-95 cursor-pointer border border-black/10 focus:scale-110 dark:bg-gray-500 dark:text-gray-50"
         href="https://www.linkedin.com/in/jordanleeevans"
         target="_blank"
       >
-        <BsLinkedin className="text-2xl text-[#0077b5]" />
+        <BsLinkedin className="text-2xl text-gray-700 dark:text-gray-400" />
       </a>
       <a
-        className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full hover:bg-gray-100 hover:shadow-xl outline-none hover:scale-105 active:scale-95 border border-black/10"
+        className="bg-white p-4 text-gray-700 flex items-center gap-2 rounded-full hover:bg-gray-100 hover:shadow-xl outline-none hover:scale-105 active:scale-95 border border-black/10 dark:bg-gray-500 dark:text-gray-50"
         href="https://github.com/jordanleeevans"
         target="_blank"
       >
-        <FaGithubSquare className="text-2xl text-[#333] " />
+        <FaGithubSquare className="text-2xl text-gray-700 dark:text-gray-400" />
       </a>
     </motion.div>
   );

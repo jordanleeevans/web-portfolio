@@ -46,7 +46,7 @@ export default function Skills() {
           return (
             <motion.li
               key={index}
-              className="inline-flex h-12 animate-shimmer delay-[2000ms] items-center justify-center rounded-md border border-gray-300 bg-[linear-gradient(110deg,#f3f4f6,45%,#d1d5db,55%,#f3f4f6)] bg-[length:200%_100%] px-6 font-medium text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50"
+              className="inline-flex h-12 animate-shimmer delay-[2000ms] items-center justify-center rounded-md border border-gray-300 bg-[linear-gradient(110deg,#f3f4f6,45%,#d1d5db,55%,#f3f4f6)] bg-[length:200%_100%] px-6 font-medium text-gray-800 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 dark:bg-[linear-gradient(110deg,#1a202c,45%,#2d3748,55%,#1a202c)] dark:border-gray-700 dark:text-white dark:focus:ring-gray-600 dark:focus:ring-offset-gray-900"
               variants={fadeInAnimationVariants}
               initial="initial"
               whileInView="animate"

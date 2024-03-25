@@ -19,3 +19,16 @@ export type ActiveSectionContextType = {
   timeOfLastClick: number;
   setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
+
+// Theme Toggle Types
+
+type Theme = "light" | "dark";
+
+type ThemeContextType = {
+  theme: Theme;
+  toggleTheme: () => void;
+};
+
+type ActiveThemeProviderProps = {
+  children: React.ReactNode;
+};
