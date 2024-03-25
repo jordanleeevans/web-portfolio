@@ -21,8 +21,9 @@ export const sendEmail = async (formData: FormData) => {
     };
   }
 
+  let data;
   try {
-    await resend.emails.send({
+    data = await resend.emails.send({
       from: "Web Portfolio Contact <onboarding@resend.dev>",
       to: "jordanleeevans@hotmail.com",
       subject: "New message from your website",
@@ -32,11 +33,6 @@ export const sendEmail = async (formData: FormData) => {
   } catch (error: unknown) {
     return {
       error: getErrorMessage(error),
-    };
-  } finally {
-    return {
-      status: 200,
-      body: "Message sent successfully, whoop whoop! 🎉",
     };
   }
 };
