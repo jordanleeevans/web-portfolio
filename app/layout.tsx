@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/header.tsx";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { Toaster } from "react-hot-toast";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -29,6 +31,7 @@ export default function RootLayout({
         <ActiveSectionContextProvider>
           <Header />
           {children}
+          <Toaster position="bottom-center" />
         </ActiveSectionContextProvider>
       </body>
     </html>
