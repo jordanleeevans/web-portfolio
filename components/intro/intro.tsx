@@ -6,7 +6,7 @@ import { useInView } from "react-intersection-observer";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { useEffect } from "react";
 import { useDarkModeReminder } from "@/hooks/useDarkModeReminder";
-import useSectionInView from "@/hooks/active-section";
+import useSectionInView from "@/hooks/useSectionInView";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);

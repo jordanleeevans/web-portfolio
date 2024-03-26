@@ -3,7 +3,7 @@ import React from "react";
 import SectionHeading from "@/components/section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
-import useSectionInView from "@/hooks/active-section";
+import useSectionInView from "@/hooks/useSectionInView";
 import { motion } from "framer-motion";
 
 export default function Projects() {

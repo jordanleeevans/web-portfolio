@@ -2,7 +2,7 @@
 import React from "react";
 import { ContactForm } from "@/components/contact/contact-form";
 import SectionHeading from "@/components/section-heading";
-import useSectionInView from "@/hooks/active-section";
+import useSectionInView from "@/hooks/useSectionInView";
 import { motion } from "framer-motion";
 
 export default function Contact() {

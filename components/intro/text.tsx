@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { RoughNotation } from "react-rough-notation";
-import { useRoughNotationAnimation } from "@/hooks/rough-notation";
+import { useRoughNotationAnimation } from "@/hooks/useRoughNotationAnimation";
 import { useActiveTheme } from "@/context/active-theme-context";
 
 export default function IntroText() {
