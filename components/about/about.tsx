@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import SectionHeading from "@/components/section-heading";
-import { RoughNotation } from "react-rough-notation";
 import { motion } from "framer-motion";
 import useSectionInView from "@/hooks/active-section";
 
