@@ -29,7 +29,6 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 + index * 0.1 }}
             >
-              {/* <Link href={link.hash}> */}
               <motion.a
                 className={clsx(
                   "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 relative hover:cursor-pointer",
@@ -69,7 +68,6 @@ export default function Header() {
                   ></motion.span>
                 )}
               </motion.a>
-              {/* </Link> */}
             </motion.li>
           ))}
         </ul>
