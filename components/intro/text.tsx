@@ -6,7 +6,7 @@ import { useActiveTheme } from "@/context/active-theme-context";
 
 export default function IntroText() {
   const { ref, inView, animationDelay } = useRoughNotationAnimation();
-  const { theme, setTheme } = useActiveTheme();
+  const { theme } = useActiveTheme();
   return (
     <motion.h1
       className="mb-10 mt-4 px-4 text-2xl font-medium leading-[1.5] sm:text-4xl"
@@ -14,9 +14,9 @@ export default function IntroText() {
       animate={{ opacity: 1, y: 0 }}
       ref={ref}
     >
-      {"Hello, I'm"}
+      <span className="mx-[0.1rem]">{"Hello, I'm"}</span>
+      {/* {"Hello, I'm"} */}
       <RoughNotation
-        className="mx-2 my-10"
         type="highlight"
         show={inView}
         color={theme === "light" ? "#ffc379" : "#78716c"}
@@ -26,7 +26,7 @@ export default function IntroText() {
       >
         <span className="font-bold ml-2"> Jordan Evans. </span>
       </RoughNotation>
-      A data driven
+      <span className="mx-[0.2rem]">A data driven</span>
       <span className="font-bold"> software engineer</span>,
       <span className="font-bold"> data engineer </span>
       and
