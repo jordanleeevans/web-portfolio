@@ -8,18 +8,10 @@ import clsx from "clsx";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import { RoughNotation } from "react-rough-notation";
 
-let colorIndex = 0;
-const colors = ["#a8e6cf", "#dcedc1", "#ffd3b6", "#ffaaa5", "#ff8b94"];
-
-function getNextPastelColor() {
-  const color = colors[colorIndex];
-  colorIndex = (colorIndex + 1) % colors.length;
-  return color;
-}
-
 export default function Header() {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const [isHovering, setIsHovering] = React.useState<string | null>(null);
   return (
     <header className="z-[999] relative">
       <motion.div
@@ -40,7 +32,7 @@ export default function Header() {
             >
               <Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 relative",
                   {
                     "text-gray-950 dark:text-gray-200":
                       activeSection === link.name,
@@ -51,11 +43,24 @@ export default function Header() {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
+                onMouseEnter={() => setIsHovering(link.name)}
+                onMouseLeave={() => setIsHovering(null)}
               >
                 {link.name}
-                {/* {link.name === activeSection && (
+                {link.name === isHovering && (
                   <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10"
+                    className=" bg-gray-200/50 dark:bg-gray-800/50 rounded-full absolute inset-0 -z-10"
+                    layoutId="hoverSection"
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                    }}
+                  ></motion.span>
+                )}
+                {link.name === activeSection && (
+                  <motion.span
+                    className="h-[0.2rem] bg-gray-950 dark:bg-gray-200 w-3/4 absolute bottom-0"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
@@ -63,7 +68,7 @@ export default function Header() {
                       damping: 20,
                     }}
                   ></motion.span>
-                )} */}
+                )}
               </Link>
             </motion.li>
           ))}
