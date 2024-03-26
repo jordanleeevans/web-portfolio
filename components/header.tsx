@@ -32,9 +32,9 @@ export default function Header() {
             >
               <motion.Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 relative hover:cursor-auto",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 relative hover:cursor-pointer",
                   {
-                    "text-gray-950 dark:text-gray-200":
+                    "text-gray-950 dark:text-gray-100":
                       activeSection === link.name,
                   }
                 )}
