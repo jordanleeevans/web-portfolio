@@ -30,9 +30,9 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 + index * 0.1 }}
             >
-              <Link
+              <motion.Link
                 className={clsx(
-                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 relative",
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 relative hover:cursor-auto",
                   {
                     "text-gray-950 dark:text-gray-200":
                       activeSection === link.name,
@@ -43,8 +43,7 @@ export default function Header() {
                   setActiveSection(link.name);
                   setTimeOfLastClick(Date.now());
                 }}
-                onMouseEnter={() => setIsHovering(link.name)}
-                onMouseLeave={() => setIsHovering(null)}
+                onHoverStart={() => setIsHovering(link.name)}
               >
                 {link.name}
                 {link.name === isHovering && (
@@ -69,7 +68,7 @@ export default function Header() {
                     }}
                   ></motion.span>
                 )}
-              </Link>
+              </motion.Link>
             </motion.li>
           ))}
         </ul>
