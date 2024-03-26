@@ -11,7 +11,8 @@ import useSectionInView from "@/hooks/useSectionInView";
 import { useActiveTheme } from "@/context/active-theme-context";
 
 export default function Experience() {
-  const { ref, inView } = useSectionInView("Experience", 0.2);
+  const threshold = window.innerWidth > 640 ? 0.5 : 0.01;
+  const { ref, inView } = useSectionInView("Experience", threshold);
   const { theme } = useActiveTheme();
 
   const variants = {
