@@ -1,6 +1,12 @@
-import { ExpandButton, CollapseButton } from "./expand-collapse-buttons";
+import { TagListProps } from "@/lib/types";
 import Tag from "./tag";
-export default function TagList({ tags, isExpanded, setIsExpanded }) {
+import { ExpandButton, CollapseButton } from "./expand-collapse-buttons";
+
+export default function TagList({
+  tags,
+  isExpanded,
+  setIsExpanded,
+}: TagListProps) {
   return (
     <ul className="flex flex-wrap gap-2 mt-4">
       {tags.slice(0, isExpanded ? tags.length : 4).map((tag, index) => (
