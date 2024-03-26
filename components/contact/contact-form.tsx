@@ -39,7 +39,7 @@ export function ContactForm() {
             type="email"
             required
             maxLength={100}
-            className="!text-black"
+            className="text-black dark:text-white"
           />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
@@ -50,10 +50,9 @@ export function ContactForm() {
             id="message"
             placeholder="Write your message here..."
             name="senderMessage"
-            type="text"
             required
             maxLength={5000}
-            className="!text-black"
+            className="text-black dark:text-white"
           />
         </LabelInputContainer>
         <SubmitButton />
