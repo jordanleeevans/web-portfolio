@@ -22,13 +22,28 @@ export type ActiveSectionContextType = {
 
 // Theme Toggle Types
 
-type Theme = "light" | "dark";
+export type Theme = "light" | "dark";
 
-type ThemeContextType = {
+export type ThemeContextType = {
   theme: Theme;
   toggleTheme: () => void;
 };
 
-type ActiveThemeProviderProps = {
+export type ActiveThemeProviderProps = {
   children: React.ReactNode;
 };
+
+// Contact Form Types
+
+export interface CollapseButtonProps {
+  setIsExpanded: (value: boolean) => void;
+}
+
+export interface ExpandButtonProps extends CollapseButtonProps {
+  remainingTags: number;
+}
+
+export interface TagListProps extends CollapseButtonProps {
+  tags: string[];
+  isExpanded: boolean;
+}
