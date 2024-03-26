@@ -15,7 +15,6 @@ export default function IntroText() {
       ref={ref}
     >
       <span className="mx-[0.1rem]">{"Hello, I'm"}</span>
-      {/* {"Hello, I'm"} */}
       <RoughNotation
         type="highlight"
         show={inView}
