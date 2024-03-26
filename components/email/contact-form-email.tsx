@@ -19,9 +19,6 @@ export function ContactFormEmail({ message }: ContactFormEmailProps) {
   // TODO: Add better styling
   return (
     <Html>
-      <Head>
-        <Tailwind />
-      </Head>
       <Body>
         <Section className="bg-gray-100 p-8">
           <Container className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl m-4 p-4">
