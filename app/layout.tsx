@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/header.tsx";
-import Footer from "@/components/footer.tsx";
-import ThemeToggle from "@/components/ui/theme-toggle.tsx";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import ThemeToggle from "@/components/ui/theme-toggle";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import ActiveThemeContextProvider from "@/context/active-theme-context";
 import { AuroraBackground } from "@/components/ui/aurora-background";

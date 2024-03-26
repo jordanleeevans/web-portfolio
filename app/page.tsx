@@ -1,10 +1,10 @@
-import Intro from "@/components/intro/intro.tsx";
+import Intro from "@/components/intro/intro";
 import SectionDivider from "@/components/section-divider";
-import About from "@/components/about/about.tsx";
-import Projects from "@/components/projects/projects.tsx";
-import Skills from "@/components/skills/skills.tsx";
-import Experience from "@/components/experience/experience.tsx";
-import Contact from "@/components/contact/contact.tsx";
+import About from "@/components/about/about";
+import Projects from "@/components/projects/projects";
+import Skills from "@/components/skills/skills";
+import Experience from "@/components/experience/experience";
+import Contact from "@/components/contact/contact";
 
 export default function Home() {
   return (
