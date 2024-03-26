@@ -33,7 +33,9 @@ export type ActiveThemeProviderProps = {
   children: React.ReactNode;
 };
 
-// Contact Form Types
+// Project Types
+
+type Tag = string;
 
 export interface CollapseButtonProps {
   setIsExpanded: (value: boolean) => void;
@@ -43,7 +45,11 @@ export interface ExpandButtonProps extends CollapseButtonProps {
   remainingTags: number;
 }
 
+export interface TagProps {
+  tag: Tag;
+}
+
 export interface TagListProps extends CollapseButtonProps {
-  tags: string[];
+  tags: Tag[];
   isExpanded: boolean;
 }
