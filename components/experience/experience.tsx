@@ -12,7 +12,7 @@ import { useActiveTheme } from "@/context/active-theme-context";
 
 export default function Experience() {
   const { ref, inView } = useSectionInView("Experience", 0.2);
-  const { theme, setTheme } = useActiveTheme();
+  const { theme } = useActiveTheme();
 
   const variants = {
     hidden: { opacity: 0 },

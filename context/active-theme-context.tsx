@@ -41,7 +41,12 @@ export default function ActiveThemeProvider({
   );
 }
 
-export function useActiveTheme() {
+interface ThemeContextType {
+  theme: Theme;
+  toggleTheme: () => void;
+}
+
+export function useActiveTheme(): ThemeContextType {
   const context = useContext(ThemeContext);
   if (!context) {
     throw new Error("useActiveTheme must be used within a ActiveThemeProvider");
