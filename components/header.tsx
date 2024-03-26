@@ -29,47 +29,47 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 + index * 0.1 }}
             >
-              <Link href={link.hash}>
-                <motion.a
-                  className={clsx(
-                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 relative hover:cursor-pointer",
-                    {
-                      "text-gray-950 dark:text-gray-100":
-                        activeSection === link.name,
-                    }
-                  )}
-                  href={link.hash}
-                  onClick={() => {
-                    setActiveSection(link.name);
-                    setTimeOfLastClick(Date.now());
-                  }}
-                  onHoverStart={() => setIsHovering(link.name)}
-                >
-                  {link.name}
-                  {link.name === isHovering && (
-                    <motion.span
-                      className=" bg-gray-200/50 dark:bg-gray-800/50 rounded-full absolute inset-0 -z-10"
-                      layoutId="hoverSection"
-                      transition={{
-                        type: "spring",
-                        stiffness: 260,
-                        damping: 20,
-                      }}
-                    ></motion.span>
-                  )}
-                  {link.name === activeSection && (
-                    <motion.span
-                      className="h-[0.2rem] bg-gray-950 dark:bg-gray-200 w-3/4 absolute bottom-0"
-                      layoutId="activeSection"
-                      transition={{
-                        type: "spring",
-                        stiffness: 260,
-                        damping: 20,
-                      }}
-                    ></motion.span>
-                  )}
-                </motion.a>
-              </Link>
+              {/* <Link href={link.hash}> */}
+              <motion.a
+                className={clsx(
+                  "flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition dark:text-gray-500 dark:hover:text-gray-300 relative hover:cursor-pointer",
+                  {
+                    "text-gray-950 dark:text-gray-100":
+                      activeSection === link.name,
+                  }
+                )}
+                href={link.hash}
+                onClick={() => {
+                  setActiveSection(link.name);
+                  setTimeOfLastClick(Date.now());
+                }}
+                onHoverStart={() => setIsHovering(link.name)}
+              >
+                {link.name}
+                {link.name === isHovering && (
+                  <motion.span
+                    className=" bg-gray-200/50 dark:bg-gray-800/50 rounded-full absolute inset-0 -z-10"
+                    layoutId="hoverSection"
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                    }}
+                  ></motion.span>
+                )}
+                {link.name === activeSection && (
+                  <motion.span
+                    className="h-[0.2rem] bg-gray-950 dark:bg-gray-200 w-3/4 absolute bottom-0"
+                    layoutId="activeSection"
+                    transition={{
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 20,
+                    }}
+                  ></motion.span>
+                )}
+              </motion.a>
+              {/* </Link> */}
             </motion.li>
           ))}
         </ul>
