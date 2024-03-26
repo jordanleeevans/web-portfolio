@@ -17,11 +17,11 @@ export function ContactForm() {
 
       <form
         className="my-8"
-        action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
+        action={async (formData: FormData) => {
+          const res = await sendEmail(formData);
 
-          if (error) {
-            toast.error(error);
+          if (res?.error) {
+            toast.error(res.error);
             return;
           }
 
