@@ -1,8 +1,5 @@
 import React from "react";
-
-interface SectionHeadingProps {
-  children: React.ReactNode;
-}
+import { SectionHeadingProps } from "@/lib/types";
 
 export default function SectionHeading({ children }: SectionHeadingProps) {
   return (

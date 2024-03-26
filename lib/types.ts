@@ -1,6 +1,24 @@
 import { projectsData } from "@/lib/data";
 import { links } from "@/lib/data";
 
+// Section Heading
+
+export interface SectionHeadingProps {
+  children: React.ReactNode;
+}
+
+// UI Components
+
+export interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
+  showRadialGradient?: boolean;
+}
+
+export interface InputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {}
+
+export interface TextAreaProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {}
+
 // Project Types
 
 export type ProjectProps = (typeof projectsData)[number];

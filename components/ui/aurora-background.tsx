@@ -1,10 +1,7 @@
 "use client";
 import { cn } from "@/utils/cn";
-import React, { ReactNode } from "react";
-
-interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
-  showRadialGradient?: boolean;
-}
+import React from "react";
+import { AuroraBackgroundProps } from "@/lib/types";
 
 export const AuroraBackground = ({
   className,
