@@ -68,6 +68,6 @@ export interface TagProps {
 }
 
 export interface TagListProps extends CollapseButtonProps {
-  tags: Tag[];
+  tags: readonly Tag[];
   isExpanded: boolean;
 }

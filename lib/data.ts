@@ -2,9 +2,6 @@ import React from "react";
 import { SiJavascript } from "react-icons/si";
 import { FaPython } from "react-icons/fa";
 import { IoAnalytics } from "react-icons/io5";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
