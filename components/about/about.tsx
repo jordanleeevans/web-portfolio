@@ -22,19 +22,20 @@ export default function About() {
         explore the world of <i>software engineering</i>. During my time at
         university, I enrolled in a few coding courses and found that it was a
         great blend of problem-solving and creativity. Fast forward to today, I
-        am now a <b>software engineer</b> at Cubed - a SaaS company that
-        provides channel marketing solutions using <i>machine learning</i> and{" "}
+        am a <b>software engineer</b> at Cubed - a SaaS company that provides
+        channel marketing solutions using <i>machine learning</i> and{" "}
         <i>data analytics</i>. My stack includes <b>MySQL</b>,{" "}
         <b>Python (Django)</b>, and <b>React</b>. I am also familiar with{" "}
-        <b>TypeScript</b>, <b>Ansible</b> and <b>Docker</b>.
+        <b>TypeScript</b>, <b>Ansible</b>, <b>Docker</b>.
       </p>
       <p>
         Outside of work, you can find me playing video games, like the
         stereotypical developer, or <i>skateboarding</i>...not so much like the
-        stereotypical developer. I also love self-improvement and learning. I am
-        in the process of learning my mother tongue, <b>Welsh</b>, and I am
-        developing a home lab where I can experiment with different technologies
-        and tools.
+        stereotypical developer. I also love personal development. Currently, I
+        am developing a home lab where I can experiment with different
+        technologies and tools. Examples of services I am running include{" "}
+        <b>Traefik</b> for reverse proxying, <b>PiHole</b> for ad-blocking,{" "}
+        <b>Plex</b> for media streaming, and many more.
       </p>
     </motion.section>
   );
