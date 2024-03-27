@@ -1,22 +1,32 @@
 import { useEffect } from "react";
 import { toast } from "react-hot-toast";
 
-export function useDarkModeReminder(message: string, delay: number) {
+interface ReminderProps {
+  message: string;
+  icon: string;
+  delay: number;
+}
+
+export function useThemeToggleReminder({
+  message,
+  icon,
+  delay,
+}: ReminderProps): void {
   useEffect(() => {
-    if (!sessionStorage.getItem("darkModeToastShown")) {
+    if (!sessionStorage.getItem("toggleThemeToastShown")) {
       const timer = setTimeout(() => {
         toast(message, {
-          icon: "🌙",
+          icon: icon,
           style: {
             borderRadius: "10px",
             background: "#333",
             color: "#fff",
           },
         });
-        sessionStorage.setItem("darkModeToastShown", "true");
+        sessionStorage.setItem("toggleThemeToastShown", "true");
       }, delay);
 
       return () => clearTimeout(timer); // cleanup on unmount
     }
-  }, [message, delay]);
+  }, [message, delay, icon]);
 }
