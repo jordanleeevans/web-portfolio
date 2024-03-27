@@ -6,7 +6,8 @@ import useSectionInView from "@/hooks/useSectionInView";
 import { motion } from "framer-motion";
 
 export default function Contact() {
-  const threshold = window.innerWidth > 640 ? 0.5 : 0.2;
+  const isClient = typeof window !== "undefined";
+  const threshold = isClient && window.innerWidth > 640 ? 0.5 : 0.2;
   const { ref, inView } = useSectionInView("Contact", threshold);
   return (
     <motion.section

@@ -30,7 +30,8 @@ const fadeOutAnimationVariants = {
 };
 
 export default function Skills() {
-  const threshold = window.innerWidth > 640 ? 0.5 : 0.3;
+  const isClient = typeof window !== "undefined";
+  const threshold = isClient && window.innerWidth > 640 ? 0.5 : 0.3;
   const { ref, inView } = useSectionInView("Skills", threshold);
   return (
     <motion.section
