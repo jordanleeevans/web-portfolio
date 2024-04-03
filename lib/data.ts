@@ -51,7 +51,7 @@ export const experiencesData = [
     title: "Software Engineer",
     location: "Cubed",
     description:
-      "As a Software Engineer at Cubed, I manage a high-volume data service handling over 100 million daily requests and oversee the AWS infrastructure. I independently develop deep learning models for complex problems, maintain numerous databases and cron commands, and enhance system monitoring and machine learning tools.",
+      "As a Software Engineer at Cubed, I manage a high-volume data service handling over 1 million daily requests and oversee the AWS infrastructure. I independently develop deep learning models for complex problems, maintain numerous databases and cron commands, and enhance system monitoring and machine learning tools.",
     icon: React.createElement(FaPython),
     date: "June 2023 - Present",
   },

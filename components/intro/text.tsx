@@ -26,11 +26,8 @@ export default function IntroText() {
         <span className="font-bold ml-2"> Jordan Evans. </span>
       </RoughNotation>
       <span className="mx-[0.2rem]">A data driven</span>
-      <span className="font-bold"> software engineer</span>,
-      <span className="font-bold"> data engineer </span>
-      and
-      <span className="font-bold"> data scientist. </span>
-      On a{" "}
+      <span className="font-bold"> software engineer</span> based in the UK. On
+      a{" "}
       <RoughNotation
         type="underline"
         color={theme === "light" ? "#fd7f7f" : "#94a3b8"}
