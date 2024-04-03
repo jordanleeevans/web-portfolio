@@ -48,7 +48,7 @@ export const experiencesData = [
     date: "Aug 2021 - June 2023",
   },
   {
-    title: "Software Engineer",
+    title: "Senior Software Engineer",
     location: "Cubed",
     description:
       "As a Software Engineer at Cubed, I manage a high-volume data service handling over 1 million daily requests and oversee the AWS infrastructure. I independently develop deep learning models for complex problems, maintain numerous databases and cron commands, and enhance system monitoring and machine learning tools.",
